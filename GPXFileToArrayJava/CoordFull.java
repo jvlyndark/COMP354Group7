@@ -22,6 +22,14 @@ public class CoordFull {
 		return lon;
 	}
 
+	public String getTime() {
+		return time;
+	}
+
+	public double getEle() {
+		return ele;
+	}
+
 
 	
 	
