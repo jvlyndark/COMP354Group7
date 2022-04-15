@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TestMap</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin="">
+  </script>
+
+</head>
+<body>
+<div id="map" style="height:320px">
+</div>
+<script type="text/javascript">
+
+    var map = L.map('map').setView([51.505, -0.09], 15);
+
+    L.tileLayer('https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=6cdc98f40f0d47fa9c175a99e41688ce', {
+    attribution: 'Map data &copy; <div class="leaflet-control-attribution leaflet-control">Maps © <a href="https://www.thunderforest.com">Thunderforest</a>, Data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+}).addTo(map);
+
+var polylinePoints = [
+  [51.502500, -0.090000],
+  [51.503000, -0.090000],
+  [51.504500, -0.090500],
+  [51.504000, -0.091000]
+];
+
+var polyline = L.polyline(polylinePoints, {color: 'red'}).addTo(map);
+
+</script>
+
+</body>
+</html>
