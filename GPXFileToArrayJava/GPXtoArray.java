@@ -34,17 +34,13 @@ public class GPXtoArray {
 			double lat = Double.parseDouble(latStr);
 			double lon = Double.parseDouble(lonStr);
 			double ele = Double.parseDouble(eleStr);
-			
+
 			result.add(new CoordFull(lat, lon, time, ele));
 			System.out.println("lat: "+lat+" lon:"+lon);
 		}
-		
-		
+
 		return result;
 	}
-	
-	
-	
 }
 
 
